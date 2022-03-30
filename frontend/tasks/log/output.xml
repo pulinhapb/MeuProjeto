@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.1 (Python 3.9.7 on win32)" generated="20220319 15:17:47.376" rpa="true" schemaversion="2">
+<suite id="s1" name="Delorean" source="D:\qafullstack\PROJETO FINAL\frontend\tasks\delorean.robot">
+<test id="s1-t1" name="DELETANDO TUDO DE USUARIO E GEEKS NO BANCO(DE VOLTA AO PASSADO)">
+<kw name="Connect To Postgres">
+<msg timestamp="20220319 15:17:47.421" level="FAIL">No keyword with name 'Connect To Postgres' found.</msg>
+<status status="FAIL" starttime="20220319 15:17:47.421" endtime="20220319 15:17:47.421"/>
+</kw>
+<kw name="Resetar o banco de dados">
+<status status="NOT RUN" starttime="20220319 15:17:47.423" endtime="20220319 15:17:47.423"/>
+</kw>
+<kw name="Disconnect from Database">
+<status status="NOT RUN" starttime="20220319 15:17:47.424" endtime="20220319 15:17:47.424"/>
+</kw>
+<status status="FAIL" starttime="20220319 15:17:47.420" endtime="20220319 15:17:47.424">No keyword with name 'Connect To Postgres' found.</status>
+</test>
+<doc>Delorean</doc>
+<status status="FAIL" starttime="20220319 15:17:47.378" endtime="20220319 15:17:47.425"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Delorean">Delorean</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220319 15:17:47.418" level="ERROR">Error in file 'D:\qafullstack\PROJETO FINAL\frontend\tasks\delorean.robot' on line 4: Resource file 'D:\qafullstack\PROJETO FINAL\frontend\tasks\resources\Database.robot' does not exist.</msg>
+</errors>
+</robot>

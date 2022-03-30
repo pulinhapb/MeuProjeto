@@ -1,0 +1,28 @@
+{"level":30,"time":"2022-02-28T17:16:26.818Z","pid":11856,"hostname":"DESKTOP-UD48917","msg":"Listening on 53993"}
+{"level":30,"time":"2022-02-28T17:16:27.401Z","pid":11856,"hostname":"DESKTOP-UD48917","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2022-02-28T17:16:27.460Z","pid":11856,"hostname":"DESKTOP-UD48917","msg":"Changed active context"}
+{"level":30,"time":"2022-02-28T17:16:27.807Z","pid":11856,"hostname":"DESKTOP-UD48917","msg":"Video path: undefined"}
+{"level":30,"time":"2022-02-28T17:16:27.807Z","pid":11856,"hostname":"DESKTOP-UD48917","msg":"Changed active page"}
+{"level":30,"time":"2022-02-28T17:16:32.859Z","pid":11856,"hostname":"DESKTOP-UD48917","msg":"Page|Frame|Element resolved elementSelector: css=.login-form"}
+{"level":30,"time":"2022-02-28T17:16:32.899Z","pid":11856,"hostname":"DESKTOP-UD48917","msg":"Page|Frame|Element resolved elementSelector: id=email"}
+{"level":30,"time":"2022-02-28T17:16:32.929Z","pid":11856,"hostname":"DESKTOP-UD48917","msg":"Page|Frame|Element resolved elementSelector: id=password"}
+{"level":30,"time":"2022-02-28T17:16:32.956Z","pid":11856,"hostname":"DESKTOP-UD48917","msg":"Page|Frame|Element resolved elementSelector: css=.submit-button >> text=Entrar"}
+{"level":30,"time":"2022-02-28T17:16:37.056Z","pid":11856,"hostname":"DESKTOP-UD48917","msg":"Page|Frame|Element resolved elementSelector: css=a[href=\"/be-geek\"] >>text=Seja um Geek"}
+================= Original suppressed error =================
+page.click: Timeout 10000ms exceeded.
+=========================== logs ===========================
+waiting for selector "css=a[href="/be-geek"] >>text=Seja um Geek"
+============================================================
+    at C:\Users\Paula\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\index.js:26427:45
+    at step (C:\Users\Paula\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\index.js:26310:23)
+    at Object.next (C:\Users\Paula\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\index.js:26291:53)
+    at fulfilled (C:\Users\Paula\AppData\Local\Programs\Python\Python39\lib\site-packages\Browser\wrapper\index.js:26282:58) {
+  name: 'TimeoutError'
+}
+=============================================================
+{"level":30,"time":"2022-02-28T17:16:47.530Z","pid":11856,"hostname":"DESKTOP-UD48917","msg":"Changed active context"}
+{"level":30,"time":"2022-02-28T17:16:47.530Z","pid":11856,"hostname":"DESKTOP-UD48917","msg":"Changing current active page"}
+{"level":30,"time":"2022-02-28T17:16:47.530Z","pid":11856,"hostname":"DESKTOP-UD48917","msg":"Changed active page"}
+{"level":30,"time":"2022-02-28T17:16:47.547Z","pid":11856,"hostname":"DESKTOP-UD48917","msg":"Changed active context"}
+{"level":30,"time":"2022-02-28T17:16:47.547Z","pid":11856,"hostname":"DESKTOP-UD48917","msg":"Changing current active page"}
+{"level":30,"time":"2022-02-28T17:16:47.547Z","pid":11856,"hostname":"DESKTOP-UD48917","msg":"Changed active page"}

@@ -1,0 +1,23 @@
+robot -l NONE -o NONE -r NONE tasks\Delorean.robot
+robot -d ./logs -v BROWSER:chromium -v HEADLESS:True tests
+
+
+
+
+-----------
+robot -l NONE -o NONE -r NONE tasks\Delorean.robot
+robot -d ./logs tests\Signup.robot
+-------------
+para rodar no terminal basta apenas digitar :  ./run.bat
+para visualizar o relatório basta apenas colocar no temrinal :  robotmetrics
+PAA ESCOLHER O NAVEGADOR NO SHEEL, FAZ : robot -d ./logs -v BROWSER:chromium -v HEADLESS:True tests\Signup.robot
+para executar em paralelo , faz : pabot -d ./logs -v BROWSER:chromium -v HEADLESS:True tests
+
+======================================= API ===============
+FLUXO :
+usuário -> acessa a Web > preencher tela de login e clica no botão de entrar ;
+esse botão de entrar , envia para o GATEWAY(portão de entrada);
+o gATEWAY , SABE QUE ESSA REQUISIÇÃO ESTÁ NO SESSION, e ele direciona para API de usuários.
+Então API de usuário recebe esses dados, e valida no banco de dados se tudo está correto. e o banco responde para api de usuário que retorna para gateway que retorna para login , e na web vc está logado na aplicação.
+
+

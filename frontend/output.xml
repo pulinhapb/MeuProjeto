@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.1 (Python 3.9.7 on win32)" generated="20220228 14:16:25.747" rpa="false" schemaversion="2">
+<suite id="s1" name="Geeks" source="C:\GravidadeZero\getgeeks-gzero-main\tests\Geeks.robot">
+<kw name="Start Session" library="Base" type="SETUP">
+<kw name="New Browser" library="Browser">
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<arg>slowMo=00:00:00</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20220228 14:16:26.880" level="INFO">{"browser": "chromium", "headless": false, "handleSIGINT": true, "handleSIGTERM": true, "handleSIGHUP": true, "timeout": 30000.0, "devtools": false, "slowMo": 0.0, "tracesDir": "C:\\GravidadeZero\\getgeeks-gzero-main\\browser\\traces\\771f42c4-9e60-484f-88c1-95f1c901625a"}</msg>
+<msg timestamp="20220228 14:16:27.402" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"handleSIGINT":true,"handleSIGTERM":true,"handleSIGHUP":true,"timeout":30000,"devtools":false,"slowMo":0,"tracesDir":"C:\\GravidadeZero\\getgeeks-gzero-main\\browser\\traces\\771f42c4-9e60-484f-88c1-95f1c901625a"}</msg>
+<status status="PASS" starttime="20220228 14:16:26.879" endtime="20220228 14:16:27.402"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page. A Page is the Playwright equivalent to a tab.
+See `Browser, Context and Page` for more information about Page concept.
+Returns a stable identifier for the created page.</doc>
+<msg timestamp="20220228 14:16:30.179" level="INFO">Successfully initialized new page object and opened url: https://getgeeks-paula.herokuapp.com</msg>
+<msg timestamp="20220228 14:16:30.179" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<status status="PASS" starttime="20220228 14:16:27.402" endtime="20220228 14:16:30.180"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220228 14:16:32.195" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220228 14:16:30.181" endtime="20220228 14:16:32.195"/>
+</kw>
+<status status="PASS" starttime="20220228 14:16:26.879" endtime="20220228 14:16:32.195"/>
+</kw>
+<test id="s1-t1" name="Se tornar um Geek com tamanho menor que 80 na descrição">
+<kw name="Factory User" library="Users">
+<var>${user}</var>
+<arg>Descricao_menor</arg>
+<msg timestamp="20220228 14:16:32.207" level="INFO">${user} = {'name': 'Pulinha', 'lastname': 'teste', 'email': 'pulinha@gmail.com', 'password': 'paula1983', 'password_hash': '$2b$08$incWFVZG7AtQ6JIUdKdDmufquc9dEWWwjPu8cVw8UUAAiWl1hikCG', 'geek_profile': {'whats...</msg>
+<status status="PASS" starttime="20220228 14:16:32.207" endtime="20220228 14:16:32.208"/>
+</kw>
+<kw name="Do Login" library="Helpers">
+<arg>${user}</arg>
+<kw name="Abrir página principal" library="LoginActions">
+<kw name="Go To" library="Browser">
+<arg>${BASE_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Navigates to the given ``url``.</doc>
+<msg timestamp="20220228 14:16:32.860" level="INFO">Successfully opened URL https://getgeeks-paula.herokuapp.com</msg>
+<status status="PASS" starttime="20220228 14:16:32.208" endtime="20220228 14:16:32.860"/>
+</kw>
+<kw name="Wait For Elements State" library="Browser">
+<arg>css=.login-form</arg>
+<arg>visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20220228 14:16:32.899" level="INFO">Wait for Element with selector: css=.login-form</msg>
+<status status="PASS" starttime="20220228 14:16:32.861" endtime="20220228 14:16:32.899"/>
+</kw>
+<status status="PASS" starttime="20220228 14:16:32.208" endtime="20220228 14:16:32.899"/>
+</kw>
+<kw name="Preencher credenciais" library="LoginActions">
+<arg>${user}</arg>
+<kw name="Fill Text" library="Browser">
+<arg>${INPUT_EMAIL}</arg>
+<arg>${user}[email]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20220228 14:16:32.901" level="INFO">Fills the text 'pulinha@gmail.com' in the given field.</msg>
+<status status="PASS" starttime="20220228 14:16:32.900" endtime="20220228 14:16:32.932"/>
+</kw>
+<kw name="Fill Text" library="Browser">
+<arg>${INPUT_PASS}</arg>
+<arg>${user}[password]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20220228 14:16:32.932" level="INFO">Fills the text 'paula1983' in the given field.</msg>
+<status status="PASS" starttime="20220228 14:16:32.932" endtime="20220228 14:16:32.958"/>
+</kw>
+<status status="PASS" starttime="20220228 14:16:32.899" endtime="20220228 14:16:32.959"/>
+</kw>
+<kw name="Clicar botao de entrar" library="LoginActions">
+<kw name="Click" library="Browser">
+<arg>css=.submit-button &gt;&gt; text=Entrar</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" starttime="20220228 14:16:32.959" endtime="20220228 14:16:33.041"/>
+</kw>
+<status status="PASS" starttime="20220228 14:16:32.959" endtime="20220228 14:16:33.042"/>
+</kw>
+<status status="PASS" starttime="20220228 14:16:32.208" endtime="20220228 14:16:33.042"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>4</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220228 14:16:37.052" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20220228 14:16:33.042" endtime="20220228 14:16:37.052"/>
+</kw>
+<kw name="Clicar na opção de Seja um Geek" library="GeeksActions">
+<kw name="Click" library="Browser">
+<arg>css=a[href="/be-geek"] &gt;&gt;text=Seja um Geek</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<msg timestamp="20220228 14:16:47.312" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-1.png"&gt;&lt;img src="browser/screenshot/fail-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220228 14:16:47.327" level="FAIL">TimeoutError: page.click: Timeout 10000ms exceeded.
+=========================== logs ===========================
+waiting for selector "css=a[href="/be-geek"] &gt;&gt;text=Seja um Geek"
+============================================================</msg>
+<status status="FAIL" starttime="20220228 14:16:37.052" endtime="20220228 14:16:47.327"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220228 14:16:47.327" endtime="20220228 14:16:47.327"/>
+</kw>
+<status status="FAIL" starttime="20220228 14:16:37.052" endtime="20220228 14:16:47.332"/>
+</kw>
+<kw name="Validar formulário de seja um geek" library="GeeksActions">
+<status status="NOT RUN" starttime="20220228 14:16:47.334" endtime="20220228 14:16:47.334"/>
+</kw>
+<kw name="Preencher formulário" library="GeeksActions">
+<arg>${user}[geek_profile]</arg>
+<status status="NOT RUN" starttime="20220228 14:16:47.335" endtime="20220228 14:16:47.335"/>
+</kw>
+<kw name="Alerta mensagem igual a" library="Comum">
+<arg>A descrição deve ter no minimo 80 caracteres</arg>
+<status status="NOT RUN" starttime="20220228 14:16:47.335" endtime="20220228 14:16:47.335"/>
+</kw>
+<tag>Usr_geek_error</tag>
+<status status="FAIL" starttime="20220228 14:16:32.195" endtime="20220228 14:16:47.336">TimeoutError: page.click: Timeout 10000ms exceeded.
+=========================== logs ===========================
+waiting for selector "css=a[href="/be-geek"] &gt;&gt;text=Seja um Geek"
+============================================================</status>
+</test>
+<kw name="Finish Session" library="Base" type="TEARDOWN">
+<kw name="Take Screenshot" library="Browser">
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<msg timestamp="20220228 14:16:47.512" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220228 14:16:47.345" endtime="20220228 14:16:47.512"/>
+</kw>
+<status status="PASS" starttime="20220228 14:16:47.344" endtime="20220228 14:16:47.512"/>
+</kw>
+<doc>Se tornar um Geek</doc>
+<status status="FAIL" starttime="20220228 14:16:25.749" endtime="20220228 14:16:47.512"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Usr_geek_error</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Geeks">Geeks</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
